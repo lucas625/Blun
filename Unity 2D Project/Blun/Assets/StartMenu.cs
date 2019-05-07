@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Menu : MonoBehaviour
+public class StartMenu : MonoBehaviour
 {
     //Inicializacao dos butoes
     public Button startButton;
@@ -28,6 +28,6 @@ public class Menu : MonoBehaviour
 
     public void PersonalizarButtonPress()
     {
-       
+        SceneManager.LoadScene(2);
     }
 }
