@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143899761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.96, y: 3.54, z: 0}
+  m_LocalPosition: {x: -2.1, y: -0.25, z: 0}
   m_LocalScale: {x: 1.3399999, y: 1.3399999, z: 1}
   m_Children: []
   m_Father: {fileID: 872029831}
@@ -177,12 +177,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 94b6ee8e676afd642958d893e1cb4dad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f3dbd358c413f74aa6115366846c764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 3.34, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -211,8 +211,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 420950865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.96, y: 3.54, z: 0}
-  m_LocalScale: {x: 1.34, y: 1.34, z: 1}
+  m_LocalPosition: {x: -1.96, y: 3.51, z: 0}
+  m_LocalScale: {x: 1.36, y: 1.36, z: 1}
   m_Children: []
   m_Father: {fileID: 872029831}
   m_RootOrder: 1
@@ -252,12 +252,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 94b6ee8e676afd642958d893e1cb4dad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a18d131683fd14a875e0209b4881cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 4.15, y: 2.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -508,8 +508,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
-        m_MethodName: LoginButtonPress
+      - m_Target: {fileID: 1750679574}
+        m_MethodName: Voltar_Tela_questsButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -540,7 +540,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4206ff42e5f9d0b4ca0a6e303b354490, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62a2e5572d08b3c4588aa2161115c8aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 1750679571}
   - component: {fileID: 1750679570}
   - component: {fileID: 1750679569}
-  - component: {fileID: 1750679573}
+  - component: {fileID: 1750679574}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -651,7 +651,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1750679573
+--- !u!114 &1750679574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -659,11 +659,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750679568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00549235ed247144695b14069fb08c7e, type: 3}
+  m_Script: {fileID: 11500000, guid: f6cf9403a45a6164fb051456d1667a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoginButton: {fileID: 1627112525}
-  CadastroButton: {fileID: 2141675449}
+  Voltar_Tela_questsButton: {fileID: 1627112525}
 --- !u!1 &1994765737
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,12 +727,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e3fbc9f6923576f40aafb95aa1cb01a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b53ad6ed2f70894dbd23006e03deab2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 4.14, y: 7.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -814,7 +813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
+      - m_Target: {fileID: 0}
         m_MethodName: CadastroButtonPress
         m_Mode: 1
         m_Arguments:
@@ -846,7 +845,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cfbf92eb001c5cc4b8b3407d95428efa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 309c31842a8434144bd8f7cd4a5a5645, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
