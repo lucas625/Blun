@@ -356,7 +356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
+      - m_Target: {fileID: 0}
         m_MethodName: CadastroButtonPress
         m_Mode: 1
         m_Arguments:
@@ -388,7 +388,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d02df7204dde36a4f895409f81481c5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eba6d47a80a4e9a41aa232de845a8934, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -478,8 +478,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
-        m_MethodName: LoginButtonPress
+      - m_Target: {fileID: 1750679574}
+        m_MethodName: Game_1_ButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -510,7 +510,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 94b6ee8e676afd642958d893e1cb4dad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a18d131683fd14a875e0209b4881cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 1750679571}
   - component: {fileID: 1750679570}
   - component: {fileID: 1750679569}
-  - component: {fileID: 1750679573}
+  - component: {fileID: 1750679574}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -622,7 +622,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1750679573
+--- !u!114 &1750679574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -630,11 +630,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750679568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00549235ed247144695b14069fb08c7e, type: 3}
+  m_Script: {fileID: 11500000, guid: d20ed89cfce75eb428e0e2fb8b704eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoginButton: {fileID: 1627112525}
-  CadastroButton: {fileID: 2141675449}
+  Game_1_Button: {fileID: 1627112525}
 --- !u!1 &1994765737
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
+      - m_Target: {fileID: 0}
         m_MethodName: CadastroButtonPress
         m_Mode: 1
         m_Arguments:
@@ -817,7 +816,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 235b210d9d2a7b049af44510b579c48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48b99733f4589874ca78400b15cc47a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

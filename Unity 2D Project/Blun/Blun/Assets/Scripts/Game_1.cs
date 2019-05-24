@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartMenu : MonoBehaviour {
+public class Game_1 : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
     	public Button Game_1_Button;
@@ -19,8 +19,8 @@ public class StartMenu : MonoBehaviour {
 	}
 
 	public void Game_1_ButtonPress()
-    {
-        SceneManager.LoadScene(3);
-    }
+    	{
+        	SceneManager.LoadScene(2);
+    	}
 
 }
