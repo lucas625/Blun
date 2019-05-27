@@ -307,7 +307,7 @@ RectTransform:
   m_GameObject: {fileID: 1129336683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1.0007684}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 1.0007684}
   m_Children: []
   m_Father: {fileID: 1750679572}
   m_RootOrder: 2
@@ -429,7 +429,7 @@ RectTransform:
   m_GameObject: {fileID: 1627112523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1.02}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 1.02}
   m_Children: []
   m_Father: {fileID: 1750679572}
   m_RootOrder: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1750679574}
-        m_MethodName: Game_1_ButtonPress
+        m_MethodName: Aventura1Scene_ButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_1_Button: {fileID: 1627112525}
+  Aventura1Scene: Aventura1Scene
 --- !u!1 &1994765737
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,8 +658,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994765737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1364, y: 1364, z: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1.37, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 872029831}
   m_RootOrder: 0
@@ -735,7 +736,7 @@ RectTransform:
   m_GameObject: {fileID: 2141675447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1750679572}
   m_RootOrder: 1

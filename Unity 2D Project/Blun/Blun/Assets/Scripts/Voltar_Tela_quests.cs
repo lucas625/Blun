@@ -8,6 +8,7 @@ public class Voltar_Tela_quests : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
     	public Button Voltar_Tela_questsButton;
+		public string TelaQuestsScene= "Tela_quests";
     	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,7 @@ public class Voltar_Tela_quests : MonoBehaviour {
 
 	public void Voltar_Tela_questsButtonPress()
     	{
-        	SceneManager.LoadScene(1);
+        	SceneManager.LoadScene(TelaQuestsScene);
     	}
 
 }
