@@ -9,6 +9,8 @@ public class StartMenu : MonoBehaviour {
 	//Nome é irrelevante
     public Button LoginButton;
     public Button CadastroButton;
+    public string loginLevel= "LoginScene";
+    public string cadastroLevel= "DumbScene";
 	// Use this for initialization
 	void Start () {
 		
@@ -21,11 +23,11 @@ public class StartMenu : MonoBehaviour {
 
 	public void LoginButtonPress()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(loginLevel);
     }
 
     public void CadastroButtonPress()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(cadastroLevel);
     }
 }

@@ -8,6 +8,7 @@ public class LoginMenu : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
     public Button LoginButton;
+	public string nextLevel= "LoadingScene";
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +21,6 @@ public class LoginMenu : MonoBehaviour {
 
 	public void goButtonPress()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(nextLevel);
     }
 }
