@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingMenu : MonoBehaviour {
-	//Inicializacao dos butoes
-	//Nome é irrelevante
-    public Button LoadingButton;
+	public float delay = 3;
+	public string NewLevel= "DumbScene";
 	// Use this for initialization
 	void Start () {
-		
+		StartCoroutine(LoadLevelAfterDelay(delay));
 	}
 	
 	// Update is called once per frame
@@ -18,8 +17,9 @@ public class LoadingMenu : MonoBehaviour {
 		
 	}
 
-	public void LoadingButtonPress()
-    {
-        SceneManager.LoadScene(2);
-    }
+	IEnumerator LoadLevelAfterDelay(float delay){
+			yield return new WaitForSeconds(delay);
+			SceneManager.LoadScene(NewLevel);
+		}
+
 }
