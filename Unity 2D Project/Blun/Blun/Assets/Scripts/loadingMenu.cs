@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoginMenu : MonoBehaviour {
+public class LoadingMenu : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
-    public Button LoginButton;
+    public Button LoadingButton;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,8 +18,8 @@ public class LoginMenu : MonoBehaviour {
 		
 	}
 
-	public void goButtonPress()
+	public void LoadingButtonPress()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }
