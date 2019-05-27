@@ -8,6 +8,7 @@ public class Game_1 : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
     	public Button Game_1_Button;
+		public string Aventura1Scene= "Aventura1Scene";
     	// Use this for initialization
 	void Start () {
 		
@@ -18,9 +19,9 @@ public class Game_1 : MonoBehaviour {
 		
 	}
 
-	public void Game_1_ButtonPress()
+	public void Aventura1Scene_ButtonPress()
     	{
-        	SceneManager.LoadScene(2);
+        	SceneManager.LoadScene(Aventura1Scene);
     	}
 
 }
