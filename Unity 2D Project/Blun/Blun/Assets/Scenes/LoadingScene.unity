@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 3
-  NewLevel: DumbScene
+  NewLevel: QuestStart
 --- !u!1 &1770611923
 GameObject:
   m_ObjectHideFlags: 0

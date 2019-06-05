@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LoadingMenu : MonoBehaviour {
 	public float delay = 3;
-	public string NewLevel= "DumbScene";
+	public string NewLevel= "QuestStart";
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(LoadLevelAfterDelay(delay));
