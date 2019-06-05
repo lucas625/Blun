@@ -9,12 +9,14 @@ public class QuestStart : MonoBehaviour {
 	//Nome é irrelevante
     public Button HomeButton;
     public Button AjudaButton;
+    public Button TopLeftButton;
+    public Button TopRightButton;
     //public Button TopLeftButton;
     //public Button TopRightButton;
-    public string HomeLevel= "HomeScene";
+    public string HomeLevel= "StartMenu";
     public string AjudaLevel= "DumbScene";
-    public string TopLeftButton= "DumbScene";
-    public string TopRightButton= "DumbScene";
+    public string TopLeftLevel= "DumbScene";
+    public string TopRightLevel= "DumbScene";
 	// Use this for initialization
 	void Start () {
 		
@@ -37,12 +39,12 @@ public class QuestStart : MonoBehaviour {
 
     public void TopLeftButtonPress()
     {
-        SceneManager.LoadScene(TopLeftButton);
+        SceneManager.LoadScene(TopLeftLevel);
     }
 
     public void TopRightButtonPress()
     {
-        SceneManager.LoadScene(TopRightButton);
+        SceneManager.LoadScene(TopRightLevel);
 
     }
 }

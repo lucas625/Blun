@@ -326,8 +326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 21300000, guid: 4ddcbc81375806b4db39715f295f01d4, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1750679573}
+        m_MethodName: HomeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -614,7 +614,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932874403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750679573}
+        m_MethodName: TopLeftButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &932874403
@@ -725,7 +736,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1031978044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1750679573}
+        m_MethodName: TopRightButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1031978044
@@ -837,8 +859,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 21300000, guid: 4ddcbc81375806b4db39715f295f01d4, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1750679573}
+        m_MethodName: AjudaButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1273,13 +1295,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750679568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00549235ed247144695b14069fb08c7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a5024efa92d22045bd4c9336091b422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoginButton: {fileID: 0}
-  CadastroButton: {fileID: 0}
-  loginLevel: LoginScene
-  cadastroLevel: DumbScene
+  HomeButton: {fileID: 645986085}
+  AjudaButton: {fileID: 1349523826}
+  TopLeftButton: {fileID: 932874402}
+  TopRightButton: {fileID: 1031978043}
+  HomeLevel: StartMenu
+  AjudaLevel: DumbScene
+  TopLeftLevel: DumbScene
+  TopRightLevel: DumbScene
 --- !u!1 &2128737840
 GameObject:
   m_ObjectHideFlags: 0
