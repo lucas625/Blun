@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartMenu : MonoBehaviour {
+public class LoginMenu : MonoBehaviour {
 	//Inicializacao dos butoes
 	//Nome é irrelevante
     public Button LoginButton;
-    public Button CadastroButton;
-    public string loginLevel= "LoginScene";
-    public string cadastroLevel= "DumbScene";
+	public string nextLevel= "LoadingScene";
 	// Use this for initialization
 	void Start () {
 		
@@ -21,13 +19,8 @@ public class StartMenu : MonoBehaviour {
 		
 	}
 
-	public void LoginButtonPress()
+	public void goButtonPress()
     {
-        SceneManager.LoadScene(loginLevel);
-    }
-
-    public void CadastroButtonPress()
-    {
-        SceneManager.LoadScene(cadastroLevel);
+        SceneManager.LoadScene(nextLevel);
     }
 }
