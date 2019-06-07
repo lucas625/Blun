@@ -527,8 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99e7ebd423762c438988b4a588f3334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
-  NewLevel: QuestStart
+  delay: 1
+  NewLevel: Tela_quests
 --- !u!1 &1770611923
 GameObject:
   m_ObjectHideFlags: 0

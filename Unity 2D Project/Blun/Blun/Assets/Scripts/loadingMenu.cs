@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LoadingMenu : MonoBehaviour {
-	public float delay = 3;
-	public string NewLevel= "QuestStart";
+	public float delay = 1;
+	public string NewLevel= "Tela_quests";
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(LoadLevelAfterDelay(delay));

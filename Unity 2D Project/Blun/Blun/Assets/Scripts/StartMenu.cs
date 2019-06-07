@@ -10,7 +10,7 @@ public class StartMenu : MonoBehaviour {
     public Button LoginButton;
     public Button CadastroButton;
     public string loginLevel= "LoginScene";
-    public string cadastroLevel= "DumbScene";
+    public string cadastroLevel= "";
 	// Use this for initialization
 	void Start () {
 		

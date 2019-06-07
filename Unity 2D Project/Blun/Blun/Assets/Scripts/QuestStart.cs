@@ -14,9 +14,9 @@ public class QuestStart : MonoBehaviour {
     //public Button TopLeftButton;
     //public Button TopRightButton;
     public string HomeLevel= "StartMenu";
-    public string AjudaLevel= "DumbScene";
-    public string TopLeftLevel= "DumbScene";
-    public string TopRightLevel= "DumbScene";
+    public string AjudaLevel= "";
+    public string TopLeftLevel= "";
+    public string TopRightLevel= "";
 	// Use this for initialization
 	void Start () {
 		
