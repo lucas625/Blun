@@ -24,6 +24,7 @@ public class QuestCharada : MonoBehaviour {
     public Text textDica5;
     public Text textDica6;
     public Text resposta;
+	
 	// Use this for initialization
 	void Start () {
         textDica1.text = "Dica 1";
@@ -32,7 +33,7 @@ public class QuestCharada : MonoBehaviour {
         textDica4.text = "Dica 4";
         textDica5.text = "Dica 5";
         textDica6.text = "Dica 6";
-        
+
 	}
 	
 	// Update is called once per frame
