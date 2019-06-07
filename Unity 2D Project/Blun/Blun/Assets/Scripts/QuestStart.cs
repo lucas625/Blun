@@ -17,9 +17,10 @@ public class QuestStart : MonoBehaviour {
     public string AjudaLevel= "";
     public string TopLeftLevel= "";
     public string TopRightLevel= "";
+    public Text mensagem;
 	// Use this for initialization
 	void Start () {
-		
+		mensagem.text = "Olá " + PlayerPrefs.GetString("User") + ", eu sou Solus";
 	}
 	
 	// Update is called once per frame
@@ -44,7 +45,7 @@ public class QuestStart : MonoBehaviour {
 
     public void TopRightButtonPress()
     {
-        SceneManager.LoadScene(TopRightLevel);
+        SceneManager.LoadScene("UserScene");
 
     }
 }
