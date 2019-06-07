@@ -1145,7 +1145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 765}
+  m_AnchoredPosition: {x: 385, y: 765}
   m_SizeDelta: {x: 216.4, y: 201.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703799453
@@ -1167,7 +1167,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1f5f5309c40ecaa47ab4ef4ef1e27794, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6849c716201c3b146a201cdf7e4d222c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1305,6 +1305,7 @@ MonoBehaviour:
   HomeLevel: StartMenu
   AjudaLevel: DumbScene
   TopLeftLevel: DumbScene
+  TopRightLevel: 
   mensagem: {fileID: 2128737842}
 --- !u!1 &2128737840
 GameObject:
