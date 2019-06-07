@@ -10,9 +10,11 @@ public class UserEdit : MonoBehaviour
     public Button cancelButton;
     public InputField nameInputField;
     public InputField emailInputField;
+    
     // Use this for initialization
     void Start()
     {
+        
         Load();
 
     }

@@ -30,7 +30,7 @@ public class UserInfo : MonoBehaviour
 
     public void voltarButtonPress()
     {
-        //SceneManager.LoadScene("???");
+        SceneManager.LoadScene("QuestStart");
     }
 
 
