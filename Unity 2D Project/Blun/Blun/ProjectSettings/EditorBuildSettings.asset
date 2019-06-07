@@ -26,9 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Aventura1_buy.unity
     guid: 03e340794fd01f444b916d04c969e22d
-    path: Assets/Scenes/UserScene.unity
-    guid: 0d17a5f47d2b7f143b480d1bfd23607e
   - enabled: 1
     path: Assets/Scenes/UserEditScene.unity
     guid: 818d8e7fee6f5c243959cfcda1f4f417
+  - enabled: 1
+    path: Assets/Scenes/UserScene.unity
+    guid: 0d17a5f47d2b7f143b480d1bfd23607e
   m_configObjects: {}
