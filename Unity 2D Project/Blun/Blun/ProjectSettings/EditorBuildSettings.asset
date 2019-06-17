@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LoginScene.unity
     guid: 5fdf2157a3b7fe64fa57921b8ef1c870
   - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
+    path: Assets/Scenes/Sucesso.unity
     guid: a00552d42f264914aabc73067a423983
   - enabled: 1
     path: Assets/Scenes/QuestCharada.unity
@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuestRunas2.unity
     guid: 65f7cec4dfeaf4e4b8b2af9ae5257b7c
+  - enabled: 1
+    path: Assets/Scenes/Gartic.unity
+    guid: 05c294baad858d14ebd9d3c7caa30656
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: caa70cc422a8c33429869c69e8965169
   m_configObjects: {}
