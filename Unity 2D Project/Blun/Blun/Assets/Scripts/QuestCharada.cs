@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Timers;
+using System.Linq;
 
 public class QuestCharada : MonoBehaviour {
 	//Inicializacao dos botoes
@@ -34,7 +36,51 @@ public class QuestCharada : MonoBehaviour {
         textDica5.text = "Dica 5";
         textDica6.text = "Dica 6";
 
+        List<Text> dicasTexts = new List<Text>();
+
+        initializeDicas(dicasTexts);
+
+        List<string> dicas = new List<string>();
+
+        dicas.Add("Faz quack");
+        dicas.Add("Nada");
+        dicas.Add("Mora no lago");
+        dicas.Add("Bota ovo");
+        dicas.Add("Já chega");
+        dicas.Add("Acabou a dica");
+
+
+        StartCoroutine(StartCountdown(20, dicas, dicasTexts, 0));
+
 	}
+
+    float currCountdownValue;
+    public IEnumerator StartCountdown(float countdownValue, List<string> dicas, List<Text> dicasLabels, int index)
+    {
+            dicasLabels[index].text=dicas[index];
+        if(index<5){
+            currCountdownValue = countdownValue;
+            while (currCountdownValue > 0)
+            {
+                Debug.Log("Countdown: " + currCountdownValue);
+                yield return new WaitForSeconds(1.0f);
+                currCountdownValue--;
+            }
+            index++;
+            StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index));
+        }
+        
+    }
+
+    void initializeDicas(List<Text> dicas){
+        dicas.Add(textDica1);
+        dicas.Add(textDica2);
+        dicas.Add(textDica3);
+        dicas.Add(textDica4);
+        dicas.Add(textDica5);
+        dicas.Add(textDica6);
+    }
+
 	
 	// Update is called once per frame
 	void Update () {
