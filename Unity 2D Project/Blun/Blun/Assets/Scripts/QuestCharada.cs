@@ -51,6 +51,8 @@ public class QuestCharada : MonoBehaviour {
 
 
         StartCoroutine(StartCountdown(20, dicas, dicasTexts, 0));
+        
+        
 
 	}
 
@@ -62,7 +64,7 @@ public class QuestCharada : MonoBehaviour {
             currCountdownValue = countdownValue;
             while (currCountdownValue > 0)
             {
-                Debug.Log("Countdown: " + currCountdownValue);
+                //Debug.Log("Countdown: " + currCountdownValue);
                 yield return new WaitForSeconds(1.0f);
                 currCountdownValue--;
             }
@@ -84,7 +86,14 @@ public class QuestCharada : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        string respostaCerta = "Pato";
+        //Debug.Log("Rodando");
+        if(respostaCerta.ToLower()==resposta.text.ToLower()){
+            //Debug.Log(resposta.text);
+            resposta.color = Color.green;
+        }else{
+            resposta.color = Color.red;
+        }
 	}
 
 	public void HomeButtonPress()
