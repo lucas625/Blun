@@ -26,6 +26,8 @@ public class QuestCharada : MonoBehaviour {
     public Text textDica5;
     public Text textDica6;
     public Text resposta;
+    private IEnumerator coroutine;
+    private string respostaCerta = "Pato";
 	
 	// Use this for initialization
 	void Start () {
@@ -49,8 +51,8 @@ public class QuestCharada : MonoBehaviour {
         dicas.Add("Já chega");
         dicas.Add("Acabou a dica");
 
-
-        StartCoroutine(StartCountdown(20, dicas, dicasTexts, 0));
+        coroutine = StartCountdown(20, dicas, dicasTexts, 0);
+        StartCoroutine(coroutine);
         
         
 
@@ -62,7 +64,7 @@ public class QuestCharada : MonoBehaviour {
             dicasLabels[index].text=dicas[index];
         if(index<5){
             currCountdownValue = countdownValue;
-            while (currCountdownValue > 0)
+            while (currCountdownValue > 0 && respostaCerta.ToLower()!=resposta.text.ToLower())
             {
                 //Debug.Log("Countdown: " + currCountdownValue);
                 yield return new WaitForSeconds(1.0f);
@@ -86,10 +88,11 @@ public class QuestCharada : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        string respostaCerta = "Pato";
+        
         //Debug.Log("Rodando");
         if(respostaCerta.ToLower()==resposta.text.ToLower()){
             //Debug.Log(resposta.text);
+            //StopCoroutine(coroutine);
             resposta.color = Color.green;
         }else{
             resposta.color = Color.red;
