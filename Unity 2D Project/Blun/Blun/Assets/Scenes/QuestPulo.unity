@@ -1645,11 +1645,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750679568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca353d3da98e954a84288df4eec322e, type: 3}
+  m_Script: {fileID: 11500000, guid: c0c638c9c6c1cb346b681193e2dfeaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 863247506}
   displayText: {fileID: 516277845}
+  mensagem: {fileID: 375581978}
 --- !u!1 &1774554583
 GameObject:
   m_ObjectHideFlags: 0
