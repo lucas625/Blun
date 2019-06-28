@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuestRunas.unity
     guid: 6de795742bd522b42935cf6846c0a955
+  - enabled: 1
+    path: Assets/Scenes/QuestPulo.unity
+    guid: 938f842aa3971b143a8b1b6833143c7e
+  - enabled: 1
+    path: Assets/Scenes/QuestStart.unity
+    guid: d3a1c760b82f072419f605eb16c423db
   m_configObjects: {}
