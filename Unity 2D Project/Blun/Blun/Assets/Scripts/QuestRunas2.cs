@@ -106,97 +106,44 @@ public class QuestRunas2 : MonoBehaviour {
                 if (CurrentValue>90)
                     maiorAtual = 90;
                 if(CurrentValue<0.15) {// modo mais devagar
-                    if(Input.acceleration.z>0.004f) {
-                        CurrentValue += 0.004f;
-                    }else if(Input.acceleration.z>0.0005f){
-                        CurrentValue += Input.acceleration.z - 0.0005f;
-                    }else {
-                        CurrentValue -= 0.0001f;
-                    }
+					if (Input.touchCount >= 1) {
+					if (Input.touches[0].phase == TouchPhase.Began){
+						CurrentValue += 0.0043f;
+					}
+
+					if (Input.touches[0].phase == TouchPhase.Ended){
+						CurrentValue += 0.0043f;
+					}
+				}
                 }
-                else if(CurrentValue<0.30) {// modo mais rápido
+                else if(CurrentValue<0.70) {// modo mais rápido
                     if(!vozlunosDurante.isPlaying) {
                         playS(aDurante[1], vozlunosDurante, fDurante[1], mensagem);
                     }
-                    if(Input.acceleration.z>0.0025f) {
-                        CurrentValue += 0.0025f;
-                    }else if(Input.acceleration.z>0.001f){
-                        CurrentValue += Input.acceleration.z - 0.001f;
-                    }else {
-                        CurrentValue -= 0.0006f;
-                    }
+                    if (Input.touchCount >= 1) {
+					if (Input.touches[0].phase == TouchPhase.Began){
+						CurrentValue += 0.0043f;
+					}
+
+					if (Input.touches[0].phase == TouchPhase.Ended){
+						CurrentValue += 0.0043f;
+					}
+				}
                 }
-                else if(CurrentValue<0.40) {// modo mais devagar
+                
+                else{// final
                     if(!vozlunosDurante.isPlaying) {
                         playS(aDurante[2], vozlunosDurante, fDurante[2], mensagem);
                     }
-                    if(Input.acceleration.z>0.004f) {
-                        CurrentValue += 0.004f;
-                    }else if(Input.acceleration.z>0.0005f){
-                        CurrentValue += Input.acceleration.z - 0.0005f;
-                    }else {
-                        CurrentValue -= 0.0003f;
-                    }
-                }
-                else if(CurrentValue<0.5) {// um pé
-                    if(!vozlunosDurante.isPlaying) {
-                        playS(aDurante[3], vozlunosDurante, fDurante[3], mensagem);
-                    }
-                    if(Input.acceleration.z>0.0025f) {
-                        CurrentValue += 0.0025f;
-                    }else if(Input.acceleration.z>0.0007f){
-                        CurrentValue += Input.acceleration.z - 0.0007f;
-                    }else {
-                        CurrentValue -= 0.0004f;
-                    }
-                }
-                else if(CurrentValue<0.6) {// um pé
-                    if(!vozlunosDurante.isPlaying) {
-                        playS(aDurante[4], vozlunosDurante, fDurante[4], mensagem);
-                    }
-                    if(Input.acceleration.z>0.0025f) {
-                        CurrentValue += 0.0025f;
-                    }else if(Input.acceleration.z>0.0007f){
-                        CurrentValue += Input.acceleration.z - 0.0007f;
-                    }else {
-                        CurrentValue -= 0.0004f;
-                    }
-                }
-                else if(CurrentValue<0.75) {// pulando e girando
-                    if(!vozlunosDurante.isPlaying) {
-                        playS(aDurante[5], vozlunosDurante, fDurante[5], mensagem);
-                    }
-                    if(Input.acceleration.z>0.003f) {
-                        CurrentValue += 0.003f;
-                    }else if(Input.acceleration.z>0.0005f){
-                        CurrentValue += Input.acceleration.z - 0.0005f;
-                    }else {
-                        CurrentValue -= 0.0004f;
-                    }
-                }
-                else if(CurrentValue<0.9) {// imitando
-                    if(!vozlunosDurante.isPlaying) {
-                        playS(aDurante[6], vozlunosDurante, fDurante[6], mensagem);
-                    }
-                    if(Input.acceleration.z>0.0020f) {
-                        CurrentValue += 0.0020f;
-                    }else if(Input.acceleration.z>0.0005f){
-                        CurrentValue += Input.acceleration.z - 0.0005f;
-                    }else {
-                        CurrentValue -= 0.0002f;
-                    }
-                }
-                else{// final
-                    if(!vozlunosDurante.isPlaying) {
-                        playS(aDurante[7], vozlunosDurante, fDurante[7], mensagem);
-                    }
-                    if(Input.acceleration.z>0.001f) {
-                        CurrentValue += 0.001f;
-                    }else if(Input.acceleration.z>0.0006f){
-                        CurrentValue += Input.acceleration.z - 0.0006f;
-                    }else {
-                        CurrentValue -= 0.0003f;
-                    }
+                 if (Input.touchCount >= 1) {
+					if (Input.touches[0].phase == TouchPhase.Began){
+						CurrentValue += 0.0043f;
+					}
+
+					if (Input.touches[0].phase == TouchPhase.Ended){
+						CurrentValue += 0.0043f;
+					}
+				}
                 }
                 if(CurrentValue>=90 && maiorAtual<90){
                     vozlunos.clip = paudio[8];
@@ -236,7 +183,7 @@ public class QuestRunas2 : MonoBehaviour {
                 }
             } else {
                 playS(aDepois[0], vozlunos, fDepois[0], mensagem);
-                clicks = 19;
+                clicks = 20;
                 ready = false;
             }
         }
@@ -246,17 +193,17 @@ public class QuestRunas2 : MonoBehaviour {
         fUp();
     }
     public void SolusClick() {
-        if(clicks<18) {
+        if(clicks<19) {
             clicks += 1;
             playS(aAntes[clicks], vozlunos, fAntes[clicks], mensagem);
-        }else if(clicks==18 && ready==false){
+        }else if(clicks==19 && ready==false){
             playS(aDurante[0], vozlunosDurante, fDurante[0], mensagem);
             ready = true;
         }
-        else if(clicks==19) {
+        else if(clicks<23) {
             clicks += 1;
-            playS(aDepois[1], vozlunos, fDepois[1], mensagem);
-        }else if(clicks==20) {
+            playS(aDepois[clicks-20], vozlunos, fDepois[clicks-19], mensagem);
+        }else if(clicks==23) {
             SceneManager.LoadScene("QuestCharada");
         }
     }
