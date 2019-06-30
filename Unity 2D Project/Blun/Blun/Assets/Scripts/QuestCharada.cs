@@ -27,55 +27,95 @@ public class QuestCharada : MonoBehaviour {
     public Text textDica6;
     public Text resposta;
     private IEnumerator coroutine;
-    private string respostaCerta = "Pato";
+    private IEnumerator timer;
+    private static int resRow=0;
+    private List<string> respostas = new List<string>();
+    private List<List<string>> dicas = new List<List<string>>();
+    private List<Text> dicasTexts = new List<Text>();
+    public AudioSource FraseInicio=null;
+    
 	
 	// Use this for initialization
 	void Start () {
-        textDica1.text = "Dica 1";
-        textDica2.text = "Dica 2";
-        textDica3.text = "Dica 3";
-        textDica4.text = "Dica 4";
-        textDica5.text = "Dica 5";
-        textDica6.text = "Dica 6";
+        textDica1.text = "-";
+        textDica2.text = "-";
+        textDica3.text = "-";
+        textDica4.text = "-";
+        textDica5.text = "-";
+        textDica6.text = "-";
 
-        List<Text> dicasTexts = new List<Text>();
+        
 
         initializeDicas(dicasTexts);
 
-        List<string> dicas = new List<string>();
-
-        dicas.Add("Faz quack");
-        dicas.Add("Nada");
-        dicas.Add("Mora no lago");
-        dicas.Add("Bota ovo");
-        dicas.Add("Já chega");
-        dicas.Add("Acabou a dica");
-
-        coroutine = StartCountdown(20, dicas, dicasTexts, 0);
-        StartCoroutine(coroutine);
         
         
+        
+        //Charada 1
+        dicas.Add(new List<string> {"2 vezes em um minuto", "3 vezes em um momento", "1 vez em cem anos"});
+        respostas.Add("Letra M");
+        //Charada 2
+        dicas.Add(new List<string> {"Não é vivo", "Tem 5 dedos", "-"});
+        respostas.Add("Luvas");
+        //Charada 3
+        dicas.Add(new List<string> {"Se me alimentar, eu vivo", "Se me der de beber, eu morrerei", "-"});
+        respostas.Add("Fogo");
+        //Charada 4
+        dicas.Add(new List<string> {"Se molha, enquanto seca", "-", "-"});
+        respostas.Add("Toalha");
+        //Charada 5
+        dicas.Add(new List<string> {"Estou sempre entre terra e céu", "Costumo estar longe", "Se você se aproxima, eu me afasto"});
+        respostas.Add("O horizonte");
 
+        //Random rnd = new Random();
+        FraseInicio.Play();
+        timer = Timer(30);
+        StartCoroutine(timer);
+        
 	}
 
     float currCountdownValue;
-    public IEnumerator StartCountdown(float countdownValue, List<string> dicas, List<Text> dicasLabels, int index)
+    public IEnumerator StartCountdown(float countdownValue, List<List<string>> dicas, List<Text> dicasLabels, int index, int row)
     {
-            dicasLabels[index].text=dicas[index];
-        if(index<5){
+        dicasLabels[index].text=dicas[row][index];
+        if(index<3){
+            //Debug.Log("Entrando no IF");
             currCountdownValue = countdownValue;
-            while (currCountdownValue > 0 && respostaCerta.ToLower()!=resposta.text.ToLower())
+            while (currCountdownValue > 0)
             {
-                //Debug.Log("Countdown: " + currCountdownValue);
+                //Debug.Log("Entrando no WHILE");
                 yield return new WaitForSeconds(1.0f);
                 currCountdownValue--;
             }
             index++;
-            StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index));
+            if(index==3){
+                row++;
+                //Debug.Log("Corroutine: "+resRow);
+                resRow++;
+                index=0;
+                clean(dicasLabels);
+                
+                StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index, row));
+            }else{
+                StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index, row));
+            }
         }
         
     }
 
+    float currCountdownValue2;
+    public IEnumerator Timer(float countdownValue)
+    {
+        currCountdownValue2 = countdownValue;
+        while (currCountdownValue2 > 0)
+        {
+            //Debug.Log("Entrando no WHILE");
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue2--;
+        }
+        coroutine = StartCountdown(20, dicas, dicasTexts, 0, 0);
+        StartCoroutine(coroutine);
+    }
     void initializeDicas(List<Text> dicas){
         dicas.Add(textDica1);
         dicas.Add(textDica2);
@@ -85,18 +125,22 @@ public class QuestCharada : MonoBehaviour {
         dicas.Add(textDica6);
     }
 
+    void clean(List<Text> dicas){
+        
+        foreach (Text item in dicas){
+            item.text="-";
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
         
-        //Debug.Log("Rodando");
-        if(respostaCerta.ToLower()==resposta.text.ToLower()){
-            //Debug.Log(resposta.text);
-            //StopCoroutine(coroutine);
+        if(respostas[resRow].ToLower()==resposta.text.ToLower()){
             resposta.color = Color.green;
         }else{
             resposta.color = Color.red;
         }
+        //Debug.Log(respostas[resRow]);
 	}
 
 	public void HomeButtonPress()

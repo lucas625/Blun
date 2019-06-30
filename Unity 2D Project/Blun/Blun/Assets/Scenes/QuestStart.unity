@@ -912,7 +912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750679573}
+      - m_Target: {fileID: 0}
         m_MethodName: AjudaButtonPress
         m_Mode: 1
         m_Arguments:
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   TopLeftButton: {fileID: 932874402}
   TopRightButton: {fileID: 1031978043}
   HomeLevel: StartMenu
-  AjudaLevel: DumbScene
-  TopLeftLevel: DumbScene
+  AjudaLevel: 
+  TopLeftLevel: 
   TopRightLevel: 
   mensagem: {fileID: 2128737842}
 --- !u!1 &2128737840
