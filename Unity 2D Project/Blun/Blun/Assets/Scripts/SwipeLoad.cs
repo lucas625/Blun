@@ -31,7 +31,7 @@ public class SwipeLoad : MonoBehaviour {
     void Update ()
     {
         // Teste para Unity PC
-		if (Input.GetMouseButtonDown(0))
+	/*	if (Input.GetMouseButtonDown(0))
 		{
 			CurrentValue += 0.0043f;
 		}
@@ -40,10 +40,9 @@ public class SwipeLoad : MonoBehaviour {
 		{
 		CurrentValue += 0.0043f;
 		}
-
+*/
 		//Taps em toque
-		if (Input.touchCount >= 1)
-			{
+		if (Input.touchCount >= 1) {
 			if (Input.touches[0].phase == TouchPhase.Began){
 				CurrentValue += 0.0043f;
 			}

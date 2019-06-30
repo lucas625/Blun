@@ -32,8 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UserScene.unity
     guid: 0d17a5f47d2b7f143b480d1bfd23607e
-  - enabled: 1
-    path: Assets/Scenes/QuestRunas.unity
+  - enabled: 0
+    path: Assets/Scenes/[Deprecated]QuestRunas.unity
     guid: 6de795742bd522b42935cf6846c0a955
   - enabled: 1
     path: Assets/Scenes/QuestPulo.unity
@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PontuacaoScene.unity
     guid: 91c584a933368274f9c8388a15138b60
+  - enabled: 1
+    path: Assets/Scenes/QuestRunas2.unity
+    guid: 65f7cec4dfeaf4e4b8b2af9ae5257b7c
   m_configObjects: {}
