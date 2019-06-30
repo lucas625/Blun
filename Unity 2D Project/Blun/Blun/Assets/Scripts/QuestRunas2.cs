@@ -116,7 +116,7 @@ public class QuestRunas2 : MonoBehaviour {
 					}
 				}
                 }
-                else if(CurrentValue<0.70) {// modo mais rápido
+                else if(CurrentValue<0.50) {// modo mais rápido
                     if(!vozlunosDurante.isPlaying) {
                         playS(aDurante[1], vozlunosDurante, fDurante[1], mensagem);
                     }
@@ -182,7 +182,7 @@ public class QuestRunas2 : MonoBehaviour {
                     vozlunos.Play();
                 }
             } else {
-                playS(aDepois[0], vozlunos, fDepois[0], mensagem);
+                //playS(aDepois[0], vozlunos, fDepois[0], mensagem);
                 clicks = 20;
                 ready = false;
             }
@@ -200,11 +200,11 @@ public class QuestRunas2 : MonoBehaviour {
             playS(aDurante[0], vozlunosDurante, fDurante[0], mensagem);
             ready = true;
         }
-        else if(clicks<23) {
+        else if(clicks<23 && ready==false) {
             clicks += 1;
-            playS(aDepois[clicks-20], vozlunos, fDepois[clicks-19], mensagem);
+            playS(aDepois[clicks-21], vozlunos, fDepois[clicks-21], mensagem);
         }else if(clicks==23) {
-            SceneManager.LoadScene("QuestCharada");
+            SceneManager.LoadScene("QuestPulo");
         }
     }
     public void HomeButtonPress()
