@@ -27,8 +27,13 @@ public class QuestCharada : MonoBehaviour {
     public Text textDica6;
     public Text resposta;
     private IEnumerator coroutine;
+    private IEnumerator timer;
     private static int resRow=0;
     private List<string> respostas = new List<string>();
+    private List<List<string>> dicas = new List<List<string>>();
+    private List<Text> dicasTexts = new List<Text>();
+    public AudioSource FraseInicio=null;
+    
 	
 	// Use this for initialization
 	void Start () {
@@ -39,11 +44,11 @@ public class QuestCharada : MonoBehaviour {
         textDica5.text = "-";
         textDica6.text = "-";
 
-        List<Text> dicasTexts = new List<Text>();
+        
 
         initializeDicas(dicasTexts);
 
-        List<List<string>> dicas = new List<List<string>>();
+        
         
         
         //Charada 1
@@ -63,11 +68,10 @@ public class QuestCharada : MonoBehaviour {
         respostas.Add("O horizonte");
 
         //Random rnd = new Random();
-
+        FraseInicio.Play();
+        timer = Timer(30);
+        StartCoroutine(timer);
         
-
-        coroutine = StartCountdown(3, dicas, dicasTexts, 0, 0);
-        StartCoroutine(coroutine);
         
         
 
@@ -93,13 +97,27 @@ public class QuestCharada : MonoBehaviour {
                 resRow++;
                 index=0;
                 clean(dicasLabels);
-                resposta.text="";
+                
                 StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index, row));
             }else{
                 StartCoroutine(StartCountdown(countdownValue, dicas, dicasLabels, index, row));
             }
         }
         
+    }
+
+    float currCountdownValue2;
+    public IEnumerator Timer(float countdownValue)
+    {
+        currCountdownValue2 = countdownValue;
+        while (currCountdownValue2 > 0)
+        {
+            //Debug.Log("Entrando no WHILE");
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue2--;
+        }
+        coroutine = StartCountdown(20, dicas, dicasTexts, 0, 0);
+        StartCoroutine(coroutine);
     }
 
     void initializeDicas(List<Text> dicas){
@@ -128,7 +146,7 @@ public class QuestCharada : MonoBehaviour {
         }else{
             resposta.color = Color.red;
         }
-        Debug.Log(respostas[resRow]);
+        //Debug.Log(respostas[resRow]);
 	}
 
 	public void HomeButtonPress()
