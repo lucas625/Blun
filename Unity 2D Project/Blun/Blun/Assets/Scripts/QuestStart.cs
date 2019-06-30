@@ -19,6 +19,10 @@ public class QuestStart : MonoBehaviour {
     public string TopRightLevel= "";
     public Text mensagem;
 	// Use this for initialization
+    public void GoToQuest(string quest) {
+        SceneManager.LoadScene(quest);
+    }
+
 	void Start () {
 		mensagem.text = "Olá " + PlayerPrefs.GetString("User") + ", eu sou Solus";
 	}
@@ -35,7 +39,7 @@ public class QuestStart : MonoBehaviour {
 
     public void AjudaButtonPress()
     {
-        SceneManager.LoadScene(AjudaLevel);
+        SceneManager.LoadScene("PontuacaoScene");
     }
 
     public void TopLeftButtonPress()

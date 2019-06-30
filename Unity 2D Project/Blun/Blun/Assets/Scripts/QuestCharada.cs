@@ -72,9 +72,6 @@ public class QuestCharada : MonoBehaviour {
         timer = Timer(30);
         StartCoroutine(timer);
         
-        
-        
-
 	}
 
     float currCountdownValue;
@@ -119,7 +116,6 @@ public class QuestCharada : MonoBehaviour {
         coroutine = StartCountdown(20, dicas, dicasTexts, 0, 0);
         StartCoroutine(coroutine);
     }
-
     void initializeDicas(List<Text> dicas){
         dicas.Add(textDica1);
         dicas.Add(textDica2);
@@ -135,11 +131,9 @@ public class QuestCharada : MonoBehaviour {
             item.text="-";
         }
     }
-
 	
 	// Update is called once per frame
 	void Update () {
-        
         
         if(respostas[resRow].ToLower()==resposta.text.ToLower()){
             resposta.color = Color.green;
