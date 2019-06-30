@@ -44,6 +44,10 @@ public class LoginMenu : MonoBehaviour {
             PlayerPrefs.SetString("email", userEmail);
             PlayerPrefs.SetString("password", userPass);
 
+            if(!PlayerPrefs.HasKey("score"))
+                PlayerPrefs.SetInt("score", 0);
+
+
         }
         catch (System.Exception e)
         {

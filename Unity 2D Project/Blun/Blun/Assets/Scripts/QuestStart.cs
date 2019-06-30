@@ -39,7 +39,7 @@ public class QuestStart : MonoBehaviour {
 
     public void AjudaButtonPress()
     {
-        SceneManager.LoadScene(AjudaLevel);
+        SceneManager.LoadScene("PontuacaoScene");
     }
 
     public void TopLeftButtonPress()
