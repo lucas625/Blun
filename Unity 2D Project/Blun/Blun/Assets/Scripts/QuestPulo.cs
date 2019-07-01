@@ -257,7 +257,7 @@ public class QuestPulo : MonoBehaviour {
             clicks += 1;
             playS(aDepois[1], vozlunos, fDepois[1], mensagem);
         }else if(clicks==20) {
-            SceneManager.LoadScene("PontuacaoScene");
+            SceneManager.LoadScene("NewGartic 1");
         }
     }
     public void HomeButtonPress()
