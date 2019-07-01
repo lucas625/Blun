@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Sucesso : MonoBehaviour {
 	public float delay = 1;
-	public float i = 0;
+	public static float i;
 	public string NewLevel1= "Tela_quests";
 	public string NewLevel2= "Tela_quests";
 	public string NewLevel3= "Tela_quests";
@@ -15,7 +15,6 @@ public class Sucesso : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		i=0;
 		StartCoroutine(LoadLevelAfterDelay(delay));
 	}
 	
@@ -27,20 +26,23 @@ public class Sucesso : MonoBehaviour {
     IEnumerator LoadLevelAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-		i++;
-			if(i==1){
+			if(i==0){
+				i++;
 				SceneManager.LoadScene(NewLevel1);
 			}
-			if(i==2){
+			else if(i==1){
+				i++;
 				SceneManager.LoadScene(NewLevel2);
 			}
-			if(i==3){
+			else if(i==2){
+				i++;
 				SceneManager.LoadScene(NewLevel3);
 			}
-			if(i==4){
+			else if(i==3){
+				i++;
 				SceneManager.LoadScene(NewLevel4);
 			}
-			if(i==5){
+			else if(i==4){
 				SceneManager.LoadScene(NewLevel5);
 			}
 		
